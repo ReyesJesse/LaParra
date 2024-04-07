@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>La Parra Restaurant</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="logo">
+            LP
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li><a href="#jump-to-about">About Us</a></li>
+                <li><a href="#jump-to-contact">Contact</a></li>
+                <li><a href="#gallery">Gallery > </a></li>
+                <li id="bookTable"><a href="#heading">Book Now</a></li>
+            </ul>
+        </div>
+        <div class="menu-toggle">
+            <i id="menuBurger" class="fa fa-bars"></i>
+        </div>
+    </nav>
+    <!--Into section-->
+    <section id="fadeIn"class="landing-page">
+        <div class="introBook">
+            <div class="topLaPerra">La Parra Restaurant</div>
+            <div class="button-container">
+                <a href="#" class="bookNow">Book Now</a>
+            </div>
+        </div>
+    </section>
+    <!------------------------------------------Book appointment section----------------------------------------->
+    <section class="bookAppointment">
+        <div class="bookingContainer">
+            <h1 id="heading">Book with us</h1>
+            <div>
+                <p id="paragraph">La Parra Restaurant & Bar, in Berwyn, IL, is a premier dining establishment serving the Chicago, Cicero and Oak Park areas. We specialize in home made pastas, tapas and the best cocktails you'll ever try. We offer a Mediterranean style menu, a full bar, and dine in or carry out options.For your next night out, visit La Parra Restaurant & Bar in Berwyn. The best Mediterranean around!</p>
+            </div>
+        <form action="process_reservation.php" method="post">
+            <div class="reservation-inputs">
+                <div>
+                    <label for="reservation-date">Choose a date:</label>
+                    <input type="date" id="reservation-date" name="reservation-date" placeholder="YYYY-MM-DD" value="<?php echo date('Y-m-d'); ?>">
+                </div>
+                <div>
+                    <label for="reservation-time">Choose a time:</label>
+                    <input type="time" id="reservation-time" name="reservation-time" value="12:00">
+                </div>
+                
+                <div>
+                    <label for="party-size">Party size:</label>
+                    <select id="party-size" name="party-size">
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option> <!-- Set default option to 2 -->
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+                <div>
+                    <button  type="submit">Book Now</button>
+                </div>
+            </div>
+            </form>
+            
+        </div>
+    </section>
+    <!----------------------------------Gallery Section------------------------------------------->
+    <section id='gallery' class="gallerySection">
+        <div class="galleryContainer">
+            <h2 class="galleryHeading">Gallery ></h2>
+            <div class="photo">
+                <img src="/galleryContent/galleryPhoto1.jpg" alt="Photo 1">
+            </div>
+            <div class="photo">
+                <img src="/galleryContent/galleryPhoto2.jpg" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="/galleryContent/galleryPhoto3.jpg" alt="Photo 3">
+            </div>
+            
+            <div class="photo">
+                <img src="/galleryContent/galleryPhoto4.jpg" alt="Photo 4">
+            </div>
+            <div class="photo">
+                <img src="/galleryContent/galleryPhoto5.jpg" alt="Photo 5">
+            </div>
+            <div class="photo">
+                <img src="/galleryContent/galleryPhoto6.jpg" alt="Photo 6">
+            </div>
+            <div class="photo">
+                <img src="/galleryContent/galleryPhoto7.jpg" alt="Photo 7">
+            </div>
+            
+            <div class="photo">
+                <img src="/galleryContent/galleryPhoto8.jpg" alt="Photo 8">
+            </div>
+            <div class="photo">
+                <img src="/galleryContent/galleryPhoto9.jpg" alt="Photo 9">
+            </div>
+            <div class="photo">
+                <img src="/galleryContent/galleryPhoto10.jpg" alt="Photo 10">
+            </div>
+        </div>
+    </section>
+    <!-----------------------Dining At La Parra section------------------------->
+    <section id='jump-to-about' class="dinningLaPerra">
+        <div class="dinningContainer">
+            <h1>Dining At La Parra</h1>
+            <p>La Parra Restaurant & Bar, in Berwyn, IL, is a premier dining establishment serving the Chicago, Cicero and Oak Park areas. We specialize in home made pastas, tapas and the best cocktails you'll ever try. We offer a Mediterranean style menu, a full bar, and dine in or carry out options.<br>
+
+                For your next night out, visit La Parra Restaurant & Bar in Berwyn. The best Mediterranean around!</p>
+            <div class="dineButtonContainer">
+                <a href="#heading"><button>Reserve an open table</button></a>
+            </div>
+            <div class="photo-container">
+                <div class="photo dineIn">
+                    <img src="/diningArea.jpg" alt="Photo 11 ">
+                </div>
+                <div class="photo dineIn">
+                    <img src="/diningArea2.jpg" alt="Photo 12">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="wine-section">
+        <div class="wine-container">
+            <h2>The Perra Group Wine Series</h2>
+            <div>
+                A unique, wine-focused dinner series showcasing both wine varietals and producers from around the world.
+            </div>
+            <div class="wine-button">
+                    <button>Explore our 2023 Dinners</button>
+            </div>
+            <div class="wine-picture">
+                <img src="/wine.jpg" alt="Photo 13">
+            </div>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3>La Parra Restaurant</h3>
+                <p>&copy; 2024 La Parra Restaurant. All rights reserved.</p>
+                <ul class="footer-social-icons">
+                    <li><a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h3>Contact Us</h3>
+                <p id="jump-to-contact">Phone: 123-456-7890</p>
+                <p>Email: info@laparrarestaurant.com</p>
+                <form class="email-signup-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>

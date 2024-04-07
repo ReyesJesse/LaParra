@@ -1,0 +1,670 @@
+*,
+html,
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+@font-face {
+    font-family: myLogo;
+    src: url(BarettStreet.ttf);
+}
+@font-face {
+    font-family: LaPerra;
+    src: url(/Gabriella.ttf);
+}
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-list ul {
+    
+    list-style-type: none;
+    margin-top: -10px;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.nav-list ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-list ul li:last-child {
+    margin-right: 0;
+    
+}
+
+.logo  {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Adjust shadow properties as needed */
+
+    font-family: myLogo;
+   font-size: 35px;
+}
+.nav-list a {
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    overflow: hidden; /* Ensure overflow is hidden for the animation */
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%; /* Start from the middle */
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background-color: black; /* Change color as needed */
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-list a:hover::after {
+    width: 100%; /* Expand width on hover */
+    transition: width 0.3s ease-in-out;
+}
+.menu-toggle {
+    display: none; /* Hide initially */
+}
+
+#menuBurger {
+    font-size: 25px; /* Adjust as needed */
+}
+
+.landing-page {
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: opacity 1.5s ease-in; /* Apply transition for smooth animation */
+    background-image: url(pexels-pixabay-260922.jpg);
+    background-position: center;
+    background-color: #453643;
+    height: 75vh; /* Fixed height */
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-size: 2000px; /* Scale the background image to cover the entire container */
+}
+
+.landing-page.fade-in {
+    opacity: 1; /* Set opacity to 1 to make it fully visible */
+}
+.introBook{
+font-weight: 700;
+    width: 100%;
+    color: white;
+    position: relative;
+    font-size: 50px;
+    font-family:myLogo;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust shadow properties as needed */
+
+}
+
+.bookNow{
+    
+    display: flex;
+    justify-content: flex-start; /* Align child elements to the left by default */
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28112B;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.introBook div{
+    position: relative;
+    display: flex;
+    margin-left: 10rem;
+    
+    
+}
+.introBook .bookNow:active{
+    background-image: linear-gradient(to bottom, #28112B, #773680);
+
+}
+.introBook a{
+    
+    margin-top: 10px;
+}
+.bookAppointment{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 17px;
+line-height: 2; /* Adjust this value for your desired line height */
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+margin: 20px;
+}
+
+.bookAppointment h1,.bookAppointment div{
+    width: 90%;
+    margin: 0 auto; /* Centers the headings horizontally */
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: 400;
+
+    
+}
+
+.bookAppointment h1{
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjust shadow properties as needed */
+    border: 1px solid black;
+letter-spacing: 30px;
+    font-family: myLogo;
+    font-size: 50px;
+    background-color:#45364342;
+    
+}
+.reservation-inputs button,
+.reservation-inputs input,
+#party-size {
+    font-size: 15px;
+    border: 1px solid black;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.reservation-inputs button {
+    margin-top: 2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28112B;
+    color: white;
+}
+.reservation-inputs button:active{
+    background-image: linear-gradient(to bottom, #28112B, #773680);
+
+}
+
+
+.reservation-inputs input {
+    font-weight: 600;
+    border: none;
+}
+
+.reservation-inputs {
+    padding-bottom: 20px;
+}
+
+#party-size {
+    width: 15%;
+    font-size: 15px;
+    padding: 5px;
+}
+
+   #paragraph,
+   #heading{
+    text-align: center;
+    opacity: 0; /* Initially hide the elements */
+    transition: opacity 1s ease-in-out; /* Apply transition for smooth animation */
+
+}
+.topLaPerra {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjust shadow properties as needed */
+    letter-spacing: 25px;
+}
+
+.galleryContainer {
+    position: relative; /* Set the container as relative for absolute positioning */
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.galleryHeading {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjust shadow properties as needed */
+
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 100;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Styles for photos, transitions, etc. */
+.photo {
+    flex: 1 1 200px; /* Set a fixed width for each photo */
+    margin: 30px; /* Add margin around each photo */
+    position: relative;
+    overflow: hidden;
+    opacity: 0; /* Initially hide the photos */
+    transition: opacity 0.5s ease; /* Add transition for opacity */
+}
+
+.photo.in-view {
+    opacity: 1; /* When in view, fade in the photo */
+}
+
+.photo img {
+    margin-top: 60px;
+    width: 100%; /* Set width to 100% for responsiveness */
+    height: auto;
+    border-radius: 10px; /* Ensure the image respects the border-radius */
+    transition: transform 0.3s ease; /* Add transition for the transform property */
+}
+
+.photo:hover img {
+    transform: scale(1.05) translateY(-5px); /* Pop up and move the image slightly on hover */
+}
+.dinningLaPerra {
+    line-height: 2rem;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.dinningLaPerra h1,.dinningLaPerra p,.dineButtonContainer{
+    width: 85%;
+    margin: 0 auto;
+}
+.dinningLaPerra h1{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjust shadow properties as needed */
+font-weight: 100;
+    font-size: 40px;
+}
+.dinningLaPerra p{
+    margin-top: 2rem;
+}
+
+.dineButtonContainer button {
+    margin-top: 2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28112B;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dineButtonContainer button:hover {
+    background-color: #5d3a67;
+}
+.dinningContainer {
+    text-align: center;
+    
+}
+
+.photo-container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    margin-top: 20px; /* Add margin to separate from the text */
+}
+
+.photo {
+    margin: 0 10px; /* Add spacing between photos */
+}
+
+.photo img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+}
+
+.wine-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    
+}
+
+.wine-container {
+    margin: 0 auto;
+    line-height: 2rem;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.wine-container h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adjust shadow properties as needed */
+
+    font-weight: 100;
+    color: #333;
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wine-container div {
+    font-size: 25px;
+    color: #666;
+    margin-bottom: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: 100;
+}
+
+.wine-button button {
+    padding: 10px 20px;
+    background-color: #5d3a67;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.wine-button button:hover {
+    background-color: #8daa91e7; /* Change to a lighter shade on hover */
+}
+
+
+.wine-picture img {
+    max-width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    font-weight: 100;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.footer a{
+    color: #8daa91e7;
+    text-decoration: none;
+}
+.footer-left,
+.footer-center,
+.footer-right {
+    flex-basis: 30%;
+    text-align: center;
+}
+
+.footer-left p {
+    font-size: 14px;
+}
+
+.footer-social-icons {
+    list-style: none;
+    padding: 0;
+    line-height: 5rem;
+
+}
+
+.footer-social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 25px;
+}
+.social-icon :hover, .footer a:hover{
+  color: #5d3a67;
+
+}
+
+.footer-center ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-center ul li {
+    margin-bottom: 10px;
+}
+
+.footer-right p {
+    margin-bottom: 10px;
+}
+
+.email-signup-form input {
+    width: 80%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.email-signup-form button {
+    padding: 8px 15px;
+    background-color: #5d3a67;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.email-signup-form button:hover {
+    background-color: #8daa91e7;
+}
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    *,
+html,
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+    .nav-list ul {
+        line-height: 5rem;
+        height: 100%;
+        text-align: center;
+        width: 100%;
+        display: none; /* Hide the list */
+        position: absolute;
+        top: 0%; /* Position it below the navigation bar */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust for centering */
+        background-color: #8daa91e7;
+        padding: 10px; /* Add some padding */
+        color: white; /* Set text color to white */
+        margin-top: 0; /* Remove default margin */
+        transition: all 0.3s ease; /* Smooth transition */
+        z-index: 2;
+        /* Ensure the box-sizing property includes padding and border */
+        box-sizing: border-box;
+        animation: fadeIn 0.5s ease forwards; /* Apply fade-in animation */
+
+    }
+    .nav-bar {
+        background-color: #8DAA91;
+        
+    }
+   
+    .nav-list ul.show {
+        display: block; /* Show the list */
+        text-align: center; /* Center the list items */
+    }
+
+    .nav-list ul.show li {
+        display: block; /* Display list items on top of each other */
+        margin: 0; /* Reset margin to ensure consistency */
+        padding: 10px 0; /* Adjust padding as needed */
+    }
+    .nav-list ul {
+        /* Other styles */
+        width: 100vw; /* Use viewport width */
+
+        
+    }
+
+    .nav-list a {
+        font-weight: 600;
+        color: black;
+        font-size: 25px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjust shadow properties as needed */
+        opacity: 0; /* Start with opacity 0 */
+        animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0; /* Start from fully transparent */
+        }
+        to {
+            opacity: 1; /* End with fully opaque */
+        }
+    }
+    .menu-toggle {
+        z-index: 9999;
+        display: block; /* Show the hamburger menu */
+        
+    }
+
+    /* Rotate the hamburger icon when list is shown */
+    #menuBurger.active {
+        transform: rotate(90deg);
+        z-index: 9999;
+        animation: fadeIn 0.5s ease-in-out; /* Apply fade-in animation */
+
+    }
+    
+    .bookNow{
+margin-left: 10rem;
+}
+.landing-page {
+    background-color: #453643;
+    background-image: url(mobileBackground.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+    .introBook {
+        display: block; /* Change display to block for stacking on mobile */
+        text-align: center; /* Center the content on mobile */
+    }
+
+    .introBook div,
+    .introBook button {
+        position: relative;
+        display: block; /* Change display to block for stacking on mobile */
+        margin: 0 auto; /* Center the elements horizontally */
+        margin-bottom: 1rem; /* Add some space between stacked elements */
+        overflow: hidden;
+    }
+    
+    
+    .bookAppointment h1,.bookAppointment div{
+        padding: 10px;
+        width: 100%;
+        margin: 0 auto; /* Centers the headings horizontally */
+    }
+    .bookAppointment h1{
+    margin-top: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow properties as needed */
+    border: 0;
+letter-spacing: 0;
+    font-family: myLogo;
+    font-size: 50px;
+    background-color:#45364342;
+}
+.topLaPerra {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust shadow properties as needed */
+    letter-spacing: 0;
+} 
+.photo {
+    flex: 1 1 calc(33.33% - 20px); /* Set a width for each photo accounting for margins */
+    margin: 10px; /* Add margin around each photo */
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 2s ease forwards; /* Apply the fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+.photo:nth-child(3n+1) {
+    clear: both; /* Clear the third photo to ensure they're in rows */
+}
+
+.photo:last-child {
+    flex: 1 1 calc(100% - 20px); /* Set bigger size for the last photo */
+    margin-top: 20px; /* Add margin on top of the last photo */
+}
+
+.photo:hover {
+    transform: translateY(-5px); /* Lift the image slightly on hover */
+}
+
+.photo img {
+    width: 100%; /* Set width to 100% for responsiveness */
+    height: auto;
+    border-radius: 10px; /* Ensure the image respects the border-radius */
+}
+.galleryHeading {
+    
+    left: 53%;
+   
+}
+.dinningContainer{
+    padding: 5px;
+    font-size: 15px;
+font-weight: 100;
+    width: 100%;
+    margin: auto;
+
+}
+.dinningLaPerra h1,.dinningLaPerra p,.dineButtonContainer{
+    width: 100%;
+    margin: 0 auto;
+}
+.photo-container {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: 20px; /* Add margin to separate from the text */
+}
+.dinningLaPerra p{
+    margin-top: 2rem;
+}
+.wine-picture img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+}
